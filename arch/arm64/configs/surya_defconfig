@@ -732,8 +732,8 @@ CONFIG_SYSVIPC=y
 CONFIG_FHANDLE=y
 
 # Use of uninitialized value in concatenation (.) or string at hybris/mer-kernel-check/mer_verify_kernel_config line 204, <> line 5814.
-# Allowed values : y
-CONFIG_DUMMY=y
+# Allowed values : n
+CONFIG_DUMMY=n
 
 # Support using PPP over synchronous high-speed devices. Required by pppd and pptp over it.
 # Allowed values : y, m
@@ -744,8 +744,8 @@ CONFIG_PPP_SYNC_TTY=y
 CONFIG_VT=y
 
 # Android mandates to use a user mode helper when the kernel has to call userspace programs to handle things such as core dumps but we don't do that.
-# Allowed values : y
-CONFIG_STATIC_USERMODEHELPER=y
+# Allowed values : n
+CONFIG_STATIC_USERMODEHELPER=n
 
 # systemd: https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y
@@ -764,51 +764,47 @@ CONFIG_NLS_UTF8=y
 ######################################### WARNINGS
 # optional extra filesystem (BTRFS)
 # Allowed values : y, !
-# CONFIG_BTRFS_FS=
+CONFIG_BTRFS_FS=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_LOCKD_V4=
+CONFIG_LOCKD_V4=y
 
 # Alternative way to disable SELinux at boottime
 # Allowed values : 0, !
-# CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE=
+CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE=0
 
 # optional, for NFS support
 # Allowed values : y, m, !
-# CONFIG_SUNRPC_GSS=
+CONFIG_SUNRPC_GSS=y
 
 # systemd (optional): https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y, !
-# CONFIG_BT_HCIUART=y
+CONFIG_BT_HCIUART=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_NFS_V3_ACL=
+CONFIG_NFS_V3_ACL=y
 
 # Bluez (optional): Needed if bluetooth networking is wanted, e.g. for bluetooth tethering
 # Allowed values : y, !
-# CONFIG_BT_BNEP_PROTO_FILTER=y
-
-# optional, but highly recommended, not available on arm64 
-# Allowed values : y, !
-# CONFIG_RTC_DRV_CMOS=y
+CONFIG_BT_BNEP_PROTO_FILTER=y
 
 # systemd (optional): https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y, !
-# CONFIG_NET_CLS_CGROUP=y
+CONFIG_NET_CLS_CGROUP=y
 
 # optional, prevents user's processes from ptracing each other
 # Allowed values : y, !
-# CONFIG_SECURITY_YAMA=y
+CONFIG_SECURITY_YAMA=y
 
 # systemd (optional): http://cgit.freedesktop.org/systemd/systemd/commit/README?id=713bc0cfa477ca1df8769041cb3dbc83c10eace2
 # Allowed values : y, m, !
-# CONFIG_AUTOFS4_FS=y
+CONFIG_AUTOFS4_FS=y
 
 # optional extra filesystem (DVD & portable USB)
 # Allowed values : y, m, !
-# CONFIG_UDF_FS=y
+CONFIG_UDF_FS=y
 
 # connman: for ip6tables frag match
 # Allowed values : y, m, !
@@ -820,71 +816,67 @@ CONFIG_NLS_UTF8=y
 
 # Up to hybris-16 it's recommended to have SELinux disabled at boottime via kernel cmdline: selinux=0 or SECURITY_SELINUX_BOOTPARAM_VALUE=0. For hybris-17 SELinux should be left enabled.
 # Allowed values : y, !
-# CONFIG_SECURITY_SELINUX_BOOTPARAM=
+CONFIG_SECURITY_SELINUX_BOOTPARAM=y
 
 # systemd (optional): https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y, !
-# CONFIG_CGROUP_DEVICE=y
+CONFIG_CGROUP_DEVICE=y
 
 # optional extra filesystem (ecryptfs)
 # Allowed values : y, m, !
-# CONFIG_ECRYPT_FS=
+# CONFIG_ECRYPT_FS=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_NFS_USE_KERNEL_DNS=
+CONFIG_NFS_USE_KERNEL_DNS=y
 
 # rich-core-dumper (https://github.com/mer-tools/sp-rich-core/) needs this to collect all data for environment recreation.
 # Allowed values : y, !
-# CONFIG_CHECKPOINT_RESTORE=y
+CONFIG_CHECKPOINT_RESTORE=y
 
 # Bluez (optional): Needed if bluetooth networking is wanted, e.g. for bluetooth tethering
 # Allowed values : y, !
-# CONFIG_BT_BNEP=y
+CONFIG_BT_BNEP=y
 
 # optional extra filesystem (CD-ROM)
 # Allowed values : y, m, !
-# CONFIG_ISO9660_FS=
+CONFIG_ISO9660_FS=y
 
 # optional, for NFS & CIFS support
 # Allowed values : y, m, !
-# CONFIG_BLK_DEV_NBD=
+CONFIG_BLK_DEV_NBD=y
 
 # optional, for NFS support
 # Allowed values : y, m, !
-# CONFIG_SUNRPC=
-
-# systemd (optional): https://github.com/systemd/systemd/blob/v238/README
-# Allowed values : y, !, >=3.14
-# CONFIG_CGROUP_NET_PROIO=y
+CONFIG_SUNRPC=y
 
 # connman: for ip6tables ah match
 # Allowed values : y, m, !
-# CONFIG_IP6_NF_MATCH_AH=y
+CONFIG_IP6_NF_MATCH_AH=y
 
 # CUSE (optional): Required for software security modules support.
 # Allowed values : y, !, >=2.6
-# CONFIG_CUSE=y
+CONFIG_CUSE=y
 
 # connman (optional): for routing and statistic support in sessions, http://git.kernel.org/cgit/network/connman/connman.git/commit/README?id=41f37125887cb9208da2441e350e1e3324c17ee6
 # Allowed values : y, m, !
-# CONFIG_NETFILTER_XT_MATCH_NFACCT=y
+CONFIG_NETFILTER_XT_MATCH_NFACCT=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_NFS_V4=y
+CONFIG_NFS_V4=y
 
 # connman: for iptables sctp match
 # Allowed values : y, m, !
-# CONFIG_NETFILTER_XT_MATCH_SCTP=y
+CONFIG_NETFILTER_XT_MATCH_SCTP=y
 
 #  Bluez (optional): Needed if bluetooth networking is wanted, e.g. for bluetooth tethering
 # Allowed values : y, !
-# CONFIG_BT_BNEP_MC_FILTER=y
+CONFIG_BT_BNEP_MC_FILTER=y
 
 # Bluez (optional): Needed if bluez used as bluetooth stack
 # Allowed values : y, !
-# CONFIG_BT_HCIUART_H4=y
+CONFIG_BT_HCIUART_H4=y
 
 # connman (optional): for routing and statistic support in sessions, http://git.kernel.org/cgit/network/connman/connman.git/commit/README?id=41f37125887cb9208da2441e350e1e3324c17ee6
 # Allowed values : y, m, !
@@ -892,88 +884,104 @@ CONFIG_NLS_UTF8=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_NFS_V3=
+CONFIG_NFS_V3=y
 
 # optional, for NFS support
 # Allowed values : y, m, !
-# CONFIG_NFS_ACL_SUPPORT=
+CONFIG_NFS_ACL_SUPPORT=y
 
 # optional, only valid for kernel < 4.3
 # Allowed values : y, !, <4.3
-# CONFIG_SECURITY_YAMA_STACKED=y
+CONFIG_SECURITY_YAMA_STACKED=y
 
 # Bluez (optional): Needed if bluebinder is used with bluez (Android 8+ based ports)
 # Allowed values : y, !
-# CONFIG_BT_HCIVHCI=y
+CONFIG_BT_HCIVHCI=y
 
 # optional, enables kernel namespaces for systemd-nspawn containers
 # Allowed values : y, !
-# CONFIG_PID_NS=y
+CONFIG_PID_NS=y
 
 # optional, for NFS support
 # Allowed values : y, m, !
-# CONFIG_LOCKD=
+CONFIG_LOCKD=y
 
 # systemd (optional, but recommended): https://github.com/systemd/systemd/blob/v238/README, only valid if kernel version >= 3.6
 # Allowed values : y, !, >=3.6
-# CONFIG_MEMCG_KMEM=
+CONFIG_MEMCG_KMEM=y
 
 # Bluez (optional): Needed for HIDP (Human Interface Device Protocol) transport layer
 # Allowed values : y, !
-# CONFIG_BT_HIDP=y
+CONFIG_BT_HIDP=y
 
 # optional: Support HID devices
 # Allowed values : y, m, !
-# CONFIG_HIDRAW=y
+CONFIG_HIDRAW=y
 
 # optional, required for systemd readahead.
 # Allowed values : y, !
-# CONFIG_FANOTIFY=y
+CONFIG_FANOTIFY=y
 
 # If device uses watchdogs with dsme (https://github.com/sailfishos/dsme), this option should be enabled or watchdog does not protect the device in case dsme crashes.
 # Allowed values : y, !
-# CONFIG_WATCHDOG_NOWAYOUT=y
+CONFIG_WATCHDOG_NOWAYOUT=y
 
 # optional, for NFS support
 # Allowed values : y, m, !
-# CONFIG_NFS_FS=
+CONFIG_NFS_FS=y
 
 # optional extra filesystem (CIFS - Windows net fs)
 # Allowed values : y, m, !
-# CONFIG_CIFS=
+CONFIG_CIFS=y
 
 # Bluez (optional): Needed if bluez used as bluetooth stack
 # Allowed values : y, !
-# CONFIG_BT_RFCOMM=y
+CONFIG_BT_RFCOMM=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_NFS_V4_1=
+CONFIG_NFS_V4_1=y
 
 # connman: to enable IPv6 NAT, optional as exists in kernel between 3.7 to 5.0
 # Allowed values : y, m, !, >=3.7, <=5.0
-# CONFIG_NF_NAT_IPV6=y
+CONFIG_NF_NAT_IPV6=y
 
 # connman: for iptables dccp match
 # Allowed values : y, m, !
-# CONFIG_NETFILTER_XT_MATCH_DCCP=y
+CONFIG_NETFILTER_XT_MATCH_DCCP=y
 
 # Helping memory handling at least with Android runtime (tested on Jolla C)
 # Allowed values : y, !
-# CONFIG_ANDROID_LOW_MEMORY_KILLER=
+CONFIG_ANDROID_LOW_MEMORY_KILLER=y
 
 # connman: for ip6tables mh match
 # Allowed values : y, m, !
-# CONFIG_IPV6_NF_MATCH_MH=
+CONFIG_IP6_NF_MATCH_MH=y
 
 # optional, for NFS support
 # Allowed values : y, !
-# CONFIG_NFS_COMMON=
+CONFIG_NFS_COMMON=y
 
 # connman: for iptables recent match
 # Allowed values : y, m, !
-# CONFIG_NETFILTER_XT_MATCH_RECENT=
+CONFIG_NETFILTER_XT_MATCH_RECENT=y
 
 # ext4 filesystem requires this in order to support filesysetms with huge_file feature, which is enabled by default by mke2fs.ext4, not needed for 64bit architectures
 # Allowed values : y, !
-# CONFIG_LBDAF=
+CONFIG_LBDAF=y
+
+# systemd (optional, but recommended): https://github.com/systemd/systemd/blob/v238/README, only valid if kernel version >= 3.6
+# Allowed values : y, m, !
+CONFIG_IP6_NF_MATCH_FRAG=y
+
+# systemd (optional): https://github.com/systemd/systemd/blob/v238/README
+# Allowed values : y, !
+CONFIG_CGROUP_PERF=y
+
+# optional, but highly recommended, not available on arm64
+# Allowed values : y, !
+CONFIG_RTC_DRV_CMOS=y
+
+# systemd (optional): https://github.com/systemd/systemd/blob/v238/README
+# Allowed values : y, !, >=3.14
+CONFIG_CGROUP_NET_PRIO=y

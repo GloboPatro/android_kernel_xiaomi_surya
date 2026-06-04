@@ -28,7 +28,6 @@ CONFIG_CPUSETS=y
 CONFIG_CGROUP_CPUACCT=y
 CONFIG_CGROUP_BPF=y
 CONFIG_NAMESPACES=y
-# CONFIG_PID_NS is not set
 CONFIG_SCHED_TUNE=y
 CONFIG_DEFAULT_USE_ENERGY_AWARE=y
 CONFIG_BLK_DEV_INITRD=y
@@ -293,7 +292,6 @@ CONFIG_DM_VERITY_FEC=y
 CONFIG_DM_BOW=y
 CONFIG_NETDEVICES=y
 CONFIG_BONDING=y
-# CONFIG_DUMMY=y
 CONFIG_TUN=y
 CONFIG_VETH=y
 # CONFIG_NET_VENDOR_3COM is not set
@@ -699,7 +697,6 @@ CONFIG_SECURITY_PERF_EVENTS_RESTRICT=y
 CONFIG_SECURITY=y
 CONFIG_HARDENED_USERCOPY=y
 CONFIG_FORTIFY_SOURCE=y
-# CONFIG_STATIC_USERMODEHELPER=y
 CONFIG_STATIC_USERMODEHELPER_PATH=""
 CONFIG_SECURITY_SELINUX=y
 CONFIG_SECURITY_SMACK=y
@@ -770,10 +767,6 @@ CONFIG_BTRFS_FS=y
 # Allowed values : y, !
 CONFIG_LOCKD_V4=y
 
-# Alternative way to disable SELinux at boottime
-# Allowed values : 0, !
-CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE=0
-
 # optional, for NFS support
 # Allowed values : y, m, !
 CONFIG_SUNRPC_GSS=y
@@ -796,7 +789,7 @@ CONFIG_NET_CLS_CGROUP=y
 
 # optional, prevents user's processes from ptracing each other
 # Allowed values : y, !
-CONFIG_SECURITY_YAMA=y
+#CONFIG_SECURITY_YAMA=y
 
 # systemd (optional): http://cgit.freedesktop.org/systemd/systemd/commit/README?id=713bc0cfa477ca1df8769041cb3dbc83c10eace2
 # Allowed values : y, m, !
@@ -816,15 +809,16 @@ CONFIG_UDF_FS=y
 
 # Up to hybris-16 it's recommended to have SELinux disabled at boottime via kernel cmdline: selinux=0 or SECURITY_SELINUX_BOOTPARAM_VALUE=0. For hybris-17 SELinux should be left enabled.
 # Allowed values : y, !
-CONFIG_SECURITY_SELINUX_BOOTPARAM=y
-
+CONFIG_SECURITY_SELINUX_BOOTPARAM=n
+# or
+# CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE=1 
 # systemd (optional): https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y, !
 CONFIG_CGROUP_DEVICE=y
 
 # optional extra filesystem (ecryptfs)
 # Allowed values : y, m, !
-# CONFIG_ECRYPT_FS=y
+CONFIG_ECRYPT_FS=y
 
 # optional, for NFS support
 # Allowed values : y, !
@@ -985,3 +979,7 @@ CONFIG_RTC_DRV_CMOS=y
 # systemd (optional): https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y, !, >=3.14
 CONFIG_CGROUP_NET_PRIO=y
+
+CONFIG_USB_CONFIGFS_RNDIS=y
+
+CONFIG_USER_NS=y

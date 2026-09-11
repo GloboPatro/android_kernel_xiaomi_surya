@@ -549,7 +549,9 @@ CONFIG_STAGING=y
 CONFIG_ASHMEM=y
 CONFIG_ION=y
 CONFIG_ION_DEFER_FREE_NO_SCHED_IDLE=y
-CONFIG_QCA_CLD_WLAN=y
+####################################################################
+CONFIG_QCA_CLD_WLAN=m
+####################################################################
 CONFIG_QCOM_GENI_SE=y
 CONFIG_QPNP_REVID=y
 CONFIG_SPS=y
@@ -809,9 +811,10 @@ CONFIG_UDF_FS=y
 
 # Up to hybris-16 it's recommended to have SELinux disabled at boottime via kernel cmdline: selinux=0 or SECURITY_SELINUX_BOOTPARAM_VALUE=0. For hybris-17 SELinux should be left enabled.
 # Allowed values : y, !
-CONFIG_SECURITY_SELINUX_BOOTPARAM=n
+CONFIG_SECURITY_SELINUX_BOOTPARAM=y
 # or
-# CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE=1 
+CONFIG_SECURITY_SELINUX_BOOTPARAM_VALUE=1 
+
 # systemd (optional): https://github.com/systemd/systemd/blob/v238/README
 # Allowed values : y, !
 CONFIG_CGROUP_DEVICE=y
